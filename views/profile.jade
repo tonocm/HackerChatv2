@@ -1,0 +1,58 @@
+extends layout
+
+block content
+  title= HackerChat
+  div.set-profile
+    h1= HackerChat
+    h1 #{pageData.title}
+    form
+      h3 Interest
+      select
+        option(value='software') Software
+        option(value='hardware') Hardware
+        option(value='frontend') Frontend
+        option(value='backend') Backend
+        option(value='design') Design
+      h3 Language
+      select#language
+        option(value='c') C
+        option(value='c++') C++
+        option(value='csharp') C#
+        option(value='java') Java
+        option(value='javascript') Javascript
+        option(value='R') R
+        option(value='lAtEx') LaTeX
+        option(value='python') Python
+        option(value='php') PHP
+        option(value='ruby') Ruby
+        option(value='sql') Sql
+        option(value='css') CSS
+        option(value='html') HTML
+        option(value='nodejs') Node.js
+      h3 Industry
+      select#industry
+        option(value='health') Health
+        option(value='education') Education
+        option(value='finance') Finance
+        option(value='gaming') Gaming
+        option(value='tech') Tech
+        option(value='urban') Urban
+        option(value='music') Music
+        option(value='ai') AI
+      h3 Experience
+      input(id='experience', type='range', name='points', min='0', max='10')
+      h3 Looking for teammates good at
+      select#team
+        option(value='software') software
+        option(value='hardware') hardware
+        option(value='frontend') frontend
+        option(value='backend') backend
+        option(value='design') design
+      form(name="sendData" action="/saveprofile")
+        input(id='t1', type="hidden", name="interest", value="placeholder")
+        input(id='t2', type="hidden", name="language", value="placeholder")
+        input(id='t3', type="hidden", name="industry", value="placeholder")
+        input(id='t4', type="hidden", name="experience", value="placeholder")
+        input(id='t5', type="hidden", name="team", value="placeholder")
+        button.btn.btn-warning(onclick='saveData()', type='submit') Save
+        

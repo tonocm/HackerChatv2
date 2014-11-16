@@ -1,0 +1,17 @@
+//- layout.jade
+doctype html
+html(lang="en")
+html
+  head
+    title HackerChat
+    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(type='text/javascript', src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+    script(type='text/javascript', src='/javascripts/menu.js')
+    script(type='text/javascript' src='/javascripts/saveData.js')
+
+  body
+    include head.jade
+    .center
+      block content
+      include foot.jade

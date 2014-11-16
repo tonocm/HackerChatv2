@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    title= pageData.title
+    h1.slogan=HackerChat
+    p Welcome to #{pageData.title}
+    form.login-form(name = "login", action = "/auth/facebook")
+        input.btn.btn-block.btn-social.btn-facebook(type = "submit", value = "Facebook")
